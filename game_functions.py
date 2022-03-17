@@ -9,11 +9,11 @@ from ship import Ship
 
 def check_keydown_events(event, ai_settings, screen, ship, bullets):
     """Respond to keypresses."""
-    if event.key == pygame.K_RIGHT:
+    if event.key == pygame.K_RIGHT or event.key == pygame.K_d:
         ship.moving_right = True
-    elif event.key == pygame.K_LEFT:
+    elif event.key == pygame.K_LEFT or event.key == pygame.K_a:
         ship.moving_left = True
-    elif event.key == pygame.K_SPACE:
+    elif event.key == pygame.K_SPACE or event.key == pygame.K_w:
         fire_bullet(ai_settings, screen, ship, bullets)
     elif event.key == pygame.K_q:
         sys.exit()
